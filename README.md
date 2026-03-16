@@ -57,6 +57,23 @@ The server listens on port `8080`. For detailed setup paths, supported operating
 - [Getting Started](./docs/getting-started.md)
 - [Hosted Quick Start Docs](https://docs.endee.io/quick-start)
 
+### Example Project: Endee RAG Demo
+
+This fork also includes a small example project that demonstrates how to build a semantic search / RAG-style backend on top of Endee:
+
+- **Location**: `projects/endee-rag-demo`
+- **Stack**: Python, FastAPI, SentenceTransformers, Endee OSS (Docker)
+- **What it does**:
+  - Ingests text files, chunks them, encodes each chunk into 384-dim embeddings.
+  - Stores vectors in an Endee index (`documents_384`) via the HTTP API.
+  - Exposes `/ingest` and `/query` endpoints that return the most relevant chunks with similarity scores.
+
+See the project’s own README at `projects/endee-rag-demo/README.md` for:
+
+- Detailed architecture and data flow
+- How Endee’s HTTP API is used (index create, insert, search)
+- Exact setup and run instructions
+
 ## Use Cases
 
 ### RAG and AI Retrieval
