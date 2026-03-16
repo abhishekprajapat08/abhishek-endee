@@ -1,0 +1,7 @@
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+sentence-transformers==3.2.1
+endee==0.1.19
+msgpack==1.1.0
+
+

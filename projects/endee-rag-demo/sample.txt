@@ -1,0 +1,17 @@
+Endee is a high-performance vector database designed for semantic search, recommendations, and retrieval-augmented generation (RAG) workflows.
+It stores dense vector representations of text so that you can search by meaning, not just by keywords.
+
+In this demo project, we use a SentenceTransformers model to convert English text into 384-dimensional embeddings.
+We store those embeddings in an Endee index called "documents_384" and then run natural language queries to retrieve the most relevant chunks.
+This shows how to connect an AI or LLM application to Endee as the vector store.
+
+The RAG-style flow in this project works as follows:
+1. Take input documents such as notes, articles, or documentation.
+2. Split them into smaller chunks so each chunk captures a coherent idea.
+3. Encode each chunk into a dense vector using a sentence embedding model.
+4. Upsert these vectors into an Endee index along with the original text as metadata.
+5. At query time, encode the user's question into a vector.
+6. Ask Endee for the top-k most similar vectors and return their associated text back to the user.
+
+This internship project demonstrates an end-to-end semantic search pipeline using Endee.
+It focuses on clarity and simplicity rather than building a large production system.
